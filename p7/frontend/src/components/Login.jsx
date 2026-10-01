@@ -22,7 +22,7 @@ export default function Login() {
       if (res.success) {
         if (res.token) {
           localStorage.setItem('token', res.token);
-          navigate('/tasks');
+          window.location.href = '/tasks';
         } else {
           // Registered successfully, switch to login
           setIsLogin(true);
