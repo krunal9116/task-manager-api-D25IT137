@@ -1,4 +1,4 @@
-# Task Manager - Full Stack Application (Practical 6)
+# Task Manager - Full Stack Application
 
 This repository contains the complete Full Stack Integration for Practical 6 (React + Node.js + Express + MongoDB).
 
