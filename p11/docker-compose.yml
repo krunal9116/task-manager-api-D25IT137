@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # 1. MongoDB Database Container
+  mongodb:
+    image: mongo:6.0
+    container_name: task_manager_mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+  # 2. Node.js / Express Backend Container
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: task_manager_backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mongodb:27017/task_manager_db
+      - JWT_SECRET=super_secret_jwt_key_practical_11
+    depends_on:
+      - mongodb
+    networks:
+      - app-network
+
+  # 3. React / Vite Frontend Container
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: task_manager_frontend
+    restart: always
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+# Named volume for database persistence across container restarts (Supplementary Problem)
+volumes:
+  mongo-data:
+    name: task_manager_mongo_data
+
+# Isolated bridge network for inter-container DNS and communication
+networks:
+  app-network:
+    name: task_manager_app_network
+    driver: bridge

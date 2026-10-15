@@ -1,0 +1,33 @@
+{
+  "name": "task-manager-api-d25it137-p11",
+  "version": "1.0.0",
+  "description": "Practical 11 - Containerization with Docker and Docker Compose",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node test.js",
+    "demo": "node demo_events.js"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb",
+    "rest-api",
+    "node"
+  ],
+  "author": "D25IT137",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.5.2",
+    "node-cache": "^5.1.2"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^9.4.0"
+  }
+}
