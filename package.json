@@ -7,7 +7,10 @@
     "install:backend": "npm install --prefix p12/backend",
     "test": "npm test --prefix p12/backend",
     "lint": "npm run lint --prefix p12/backend",
-    "start": "npm start --prefix p12/backend"
+    "start": "npm start --prefix p12/backend",
+    "test:p13": "npm test --prefix p13/backend",
+    "lint:p13": "npm run lint --prefix p13/backend",
+    "start:p13": "npm start --prefix p13/backend"
   },
   "author": "D25IT137",
   "license": "ISC"

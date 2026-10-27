@@ -1,0 +1,52 @@
+{
+  "name": "task-manager-api-d25it137-p13",
+  "version": "1.0.0",
+  "description": "Practical 13 - External AI Service Integration into a Web Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "test:watch": "jest --watch",
+    "lint": "eslint . --ext .js --ignore-pattern node_modules/",
+    "lint:fix": "eslint . --ext .js --fix",
+    "demo": "node demo_events.js"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongodb",
+    "rest-api",
+    "node",
+    "openai",
+    "gemini",
+    "generative-ai",
+    "responsible-ai",
+    "graceful-degradation"
+  ],
+  "author": "D25IT137",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.5.2",
+    "node-cache": "^5.1.2",
+    "openai": "^4.52.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^9.4.0",
+    "supertest": "^6.3.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/tests/**/*.test.js"
+    ],
+    "testTimeout": 30000
+  }
+}
