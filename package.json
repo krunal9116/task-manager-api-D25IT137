@@ -1,0 +1,14 @@
+{
+  "name": "task-manager-api-d25it137-root",
+  "version": "1.0.0",
+  "description": "Task Manager Application - AWDF ITUE301 Monorepo",
+  "private": true,
+  "scripts": {
+    "install:backend": "npm install --prefix p12/backend",
+    "test": "npm test --prefix p12/backend",
+    "lint": "npm run lint --prefix p12/backend",
+    "start": "npm start --prefix p12/backend"
+  },
+  "author": "D25IT137",
+  "license": "ISC"
+}
